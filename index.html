@@ -217,6 +217,7 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Metric Details</h2>
 <table border="1" cellpadding="6" cellspacing="0">
+  <caption>This table summarizes the details about the evaluated objective evaluation metrics. Additional information and implementation details are noted in the table, all references in the table refer to the references of the paper.</caption>
   <thead>
     <tr>
       <th>Type</th>
@@ -260,38 +261,38 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
         </ul>
       </td>
       
-      <td>MSE between time-resolved Self-supervised Learning (SLL) embeddings which are: Large-scale Contrastive Language-Audio Pretraining audio (CL<sub>a</sub>) and music (CL<sub>m</sub>) embeddings [15], the 12<sup>th</sup> layer embeddings of an acoustic Music undERstanding model with large-scale self-supervised Training (MERT-L12/M-L12) [26], and Music2Latent (M2L) embeddings [17]</td>
+      <td>MSE between time-resolved Self-Supervised Learning (SSL) embeddings which are: Large-scale Contrastive Language-Audio Pretraining audio (CL<sub>a</sub>) and music (CL<sub>m</sub>) embeddings [15], the 12<sup>th</sup> layer embeddings of an acoustic Music undERstanding model with large-scale self-supervised Training (MERT-L12/M-L12) [26], and Music2Latent (M2L) embeddings [17]</td>
       <td><ul><li>All MSE's were calculated by adapted Microsoft's FAD‑toolkit (<code>fadtk</code>) [19]</li> <li>We adpoted the code of <code>fadtk</code> to compute the MSE on time-resolved embeddings and included the calculation of M2L embedings</li></ul></td>
     </tr>
 
     <!-- --------- Intrusive (non‑matching reference pool) --------- -->
     <tr>
-      <td>Fréchet Audio Distance (FAD) between separated and target embeddings</td>
-      <td>Fréchet distance between Gaussian fits of embedding distributions</td>
-      <td>Code adapted from FAD‑toolkit [19]; song‑level formula shown in Eq. (2)</td>
+      <td>Intrusive Variant of Fréchet Audio Distance  (FAD<sub>song2song</sub>)<ul><li>Embeddings as for MSE (see above)</li></ul></td>
+      <td>Fréchet distance between Gaussian fits of embedding distributions. The distributions are individually fitted to the time-resolved embeddings. The same embeddings as used for the MSE calculationen are used (CL<sub>a</sub>, CL<sub>m</sub>, M-L12, M2L).</td>
+      <td><ul><li>Calculated by adapting <code>fadtk</code> [19]</li><li>Song-level equation for FAD shown in Eq. (2)</li></ul></td>
     </tr>
 
     <!-- --------- Non‑intrusive --------- -->
     <tr>
       <td rowspan="4" style="vertical-align : middle;text-align:center;">Non-Intrusive</td>
       <td>XLS‑R‑SQA</td>
-      <td>Self‑supervised speech model estimates MOS‑like quality</td>
-      <td>Python package from [20]; input down‑sampled to 16 kHz</td>
+      <td>MOS-like speech enhancement quality that generalizes well on unseen data.</td>
+      <td><ul><li>Python package available at [20]</li><li>Manual downsampling to 16kHz required</li></ul></td>
     </tr>
     <tr>
-      <td>Audiobox‑Aesthetics (Audiobox‑AES)<br> • Production Quality (PQ)<br> • Content Usefulness (CU)</td>
-      <td>Universal quality model prompted via audio‑language embeddings</td>
-      <td>Official package [22]; auto‑resamples to 16 kHz</td>
+      <td>Audiobox‑Aesthetics<ul><li>Production Quality (PQ)</li><li>Content Usefulness (CU)</li></ul></td>
+      <td>Universal MOS-like audio quality assessment model for speech, music and sound. In total 4 evaluation axes exist, we analyzed 2 in our paper (PQ and CU).</td>
+      <td><ul><li>Python package available at [22]</li><li>Input is auto-resampled to 16kHz</li></ul></td>
     </tr>
     <tr>
       <td>PAM</td>
-      <td>Quality anchors identified in CLAP embedding space</td>
-      <td>Resources from [23]</td>
+      <td>Another non-intrusive universal MOS-like metric that prompts audio-language models for audio quality assessment  (PAM).</td>
+      <td><ul><li>Python package available at [23]</li><li>No resampling necessary as it operates on f<sub>s</sub>=44.1kHz </li></td>
     </tr>
     <tr>
       <td>SingMOS</td>
-      <td>wav2vec 2.0‑based MOS predictor for singing voice</td>
-      <td>Code from [24]; manual down‑sampling to 16 kHz required</td>
+      <td>wav2vec 2.0‑based MOS predictor for singing voice. Trained on MOS ratings of singing voice audio incl. examples from singing voice conversion and coding models.</td>
+      <td><ul><li>Code available at [24]</li><li>Manual downsampling to 16kHz required</li></td>
     </tr>
   </tbody>
 </table>
@@ -515,8 +516,8 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <h2 class="title">Citation (BibTeX)</h2>
+      <pre><code>BibTex Reference will be added once its ready!</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
