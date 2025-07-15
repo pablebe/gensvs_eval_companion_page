@@ -111,7 +111,9 @@ import matplotlib.pyplot as plt
 
 
 # Load your CSV file
-df = pd.read_csv("metric_dmos_companion_table_all_files.csv", delimiter=';')
+df = pd.read_csv("/Users/Paul/IEM-Phd/01_PhD/06_Conferences/WASPAA2025/zenodo_upload/gensvs_eval_data.csv")
+#df = df.drop(columns=['Unnamed: 0'])
+df = df[['file_id', 'model_name', 'sdr', 'emb_mse_mert_df', 'DMOS', 'singmos', 'emb_mse_music2latent_df']]
 
 # Define model groups
 group_a = ['htdemucs', 'melroformer_small', 'melroformer_large']
