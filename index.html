@@ -158,6 +158,31 @@ Traditional Blind Source Separation Evaluation (BSS-Eval) metrics were originall
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Want to benchmark your own audio quality metric on our DMOS data?</h2>
+    <div class="table-container">
+If you would like to benchmark your metric using our DMOS data, please follow these steps:
+<ol>
+  <li>Download the dataset from <a href="https://doi.org/10.5281/zenodo.15911723" target="_blank">Zenodo</a>.</li>
+  <li>Compute your metric on the evaluation audio in the folder <code>gensvs_eval_audio_and_embeddings</code>.</li>
+  <li>Append your metric scores as the last column of <code>gensvs_eval_data.csv</code>.</li>
+  <li>When appending the scores, ensure they are in the correct order (check for correct filepaths).</li>
+  <li>Finally, run <code>gensvs_eval_dmos_metric_correlation_demo.py</code> to obtain the correlation coefficients for the generative and discriminative models.</li>
+</ol>
+</div>
+    </div>
+</section>    
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Want to compute one of the objective evaluation metrics or retrain/infer our models on your data?</h2>
+    <div class="table-container">
+If you want to look into how we calculated the included objective evaluation metrics or retrain/infer our models on your own data, please refer to the <a href="https://github.com/your-repo" target="_blank">GitHub repository</a>.
+    </div>
+    </div>
+</section>  
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">SVS Model Details</h2>
     <div class="table-container">
       <table class="table is-bordered is-hoverable is-fullwidth">
@@ -301,6 +326,7 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
     <h2 class="title is-3 has-text-centered">Audio Examples</h2>
     <div class="table-container">
       <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+  <caption>This table contains audio examples for each SVS models and the achieved DMOS.</caption>
         <thead>
           <tr>
             <th class="has-text-centered">File-ID</th>
@@ -318,121 +344,121 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
             <td>#1</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_1.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_1.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_1.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_1.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_1.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_1.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_1.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_1.wav" type="audio/wav"></audio>DMOS: 3.08</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_1.wav" type="audio/wav"></audio>DMOS: 2.83</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_1.wav" type="audio/wav"></audio>DMOS: 3.67</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_1.wav" type="audio/wav"></audio>DMOS: 3.25</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_1.wav" type="audio/wav"></audio>DMOS: 4.17</td>
           </tr>
           <tr>
             <td>#2</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_2.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_2.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_2.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_2.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_2.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_2.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_2.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_2.wav" type="audio/wav"></audio>DMOS: 3.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_2.wav" type="audio/wav"></audio>DMOS: 2.33</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_2.wav" type="audio/wav"></audio>DMOS: 3.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_2.wav" type="audio/wav"></audio>DMOS: 3.33</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_2.wav" type="audio/wav"></audio>DMOS: 4.08</td>
           </tr>
           <tr>
             <td>#3</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_3.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_3.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_3.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_3.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_3.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_3.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_3.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_3.wav" type="audio/wav"></audio>DMOS: 1.83</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_3.wav" type="audio/wav"></audio>DMOS: 3.08</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_3.wav" type="audio/wav"></audio>DMOS: 3.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_3.wav" type="audio/wav"></audio>DMOS: 4.25</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_3.wav" type="audio/wav"></audio>DMOS: 4.17</td>
           </tr>
           <tr>
             <td>#5</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_5.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_5.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_5.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_5.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_5.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_5.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_5.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_5.wav" type="audio/wav"></audio>DMOS: 2.42</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_5.wav" type="audio/wav"></audio>DMOS: 2.92</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_5.wav" type="audio/wav"></audio>DMOS: 2.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_5.wav" type="audio/wav"></audio>DMOS: 3.50</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_5.wav" type="audio/wav"></audio>DMOS: 2.92</td>
           </tr>
           <tr>
             <td>#6</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_6.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_6.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_6.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_6.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_6.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_6.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_6.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_6.wav" type="audio/wav"></audio>DMOS: 1.00</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_6.wav" type="audio/wav"></audio>DMOS: 1.17</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_6.wav" type="audio/wav"></audio>DMOS: 1.42</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_6.wav" type="audio/wav"></audio>DMOS: 1.08</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_6.wav" type="audio/wav"></audio>DMOS: 1.58</td>
           </tr>
           <tr>
             <td>#10</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_10.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_10.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_10.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_10.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_10.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_10.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_10.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_10.wav" type="audio/wav"></audio>DMOS: 2.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_10.wav" type="audio/wav"></audio>DMOS: 4.00</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_10.wav" type="audio/wav"></audio>DMOS: 3.92</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_10.wav" type="audio/wav"></audio>DMOS: 4.83</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_10.wav" type="audio/wav"></audio>DMOS: 4.17</td>
           </tr>
           <tr>
             <td>#14</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_14.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_14.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_14.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_14.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_14.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_14.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_14.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_14.wav" type="audio/wav"></audio>DMOS: 1.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_14.wav" type="audio/wav"></audio>DMOS: 2.17</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_14.wav" type="audio/wav"></audio>DMOS: 2.83</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_14.wav" type="audio/wav"></audio>DMOS: 1.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_14.wav" type="audio/wav"></audio>DMOS: 3.25</td>
           </tr>
           <tr>
             <td>#21</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_21.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_21.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_21.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_21.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_21.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_21.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_21.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_21.wav" type="audio/wav"></audio>DMOS: 2.92</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_21.wav" type="audio/wav"></audio>DMOS: 2.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_21.wav" type="audio/wav"></audio>DMOS: 3.17</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_21.wav" type="audio/wav"></audio>DMOS: 3.50</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_21.wav" type="audio/wav"></audio>DMOS: 3.67</td>
           </tr>
           <tr>
             <td>#22</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_22.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_22.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_22.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_22.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_22.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_22.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_22.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_22.wav" type="audio/wav"></audio>DMOS: 1.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_22.wav" type="audio/wav"></audio>DMOS: 2.67</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_22.wav" type="audio/wav"></audio>DMOS: 3.42</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_22.wav" type="audio/wav"></audio>DMOS: 2.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_22.wav" type="audio/wav"></audio>DMOS: 3.25</td>
           </tr>
           <tr>
             <td>#31</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_31.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_31.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_31.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_31.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_31.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_31.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_31.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_31.wav" type="audio/wav"></audio>DMOS: 2.50</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_31.wav" type="audio/wav"></audio>DMOS: 2.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_31.wav" type="audio/wav"></audio>DMOS: 3.75</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_31.wav" type="audio/wav"></audio>DMOS: 2.50</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_31.wav" type="audio/wav"></audio>DMOS: 3.67</td>
           </tr>
           <tr>
             <td>#42</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_42.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_42.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_42.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_42.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_42.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_42.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_42.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_42.wav" type="audio/wav"></audio>DMOS: 3.33</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_42.wav" type="audio/wav"></audio>DMOS: 4.00</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_42.wav" type="audio/wav"></audio>DMOS: 4.25</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_42.wav" type="audio/wav"></audio>DMOS: 4.67</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_42.wav" type="audio/wav"></audio>DMOS: 4.58</td>
           </tr>
           <tr>
             <td>#44</td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mixture/mixture_fileid_44.wav" type="audio/wav"></audio></td>
             <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Target/target_fileid_44.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_44.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_44.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_44.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_44.wav" type="audio/wav"></audio></td>
-            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_44.wav" type="audio/wav"></audio></td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/HTDemucs/separated_vocals_fileid_44.wav" type="audio/wav"></audio>DMOS: 3.08</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S/separated_vocals_fileid_44.wav" type="audio/wav"></audio>DMOS: 3.58</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-L/separated_vocals_fileid_44.wav" type="audio/wav"></audio>DMOS: 4.50</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/SGMSVS/separated_vocals_fileid_44.wav" type="audio/wav"></audio>DMOS: 4.17</td>
+            <td><audio controls style="width: 100px; height: 20px"><source src="static/audio/Mel-RoFo-S_BigVGAN/separated_vocals_fileid_44.wav" type="audio/wav"></audio>DMOS: 4.25</td>
           </tr>
         </tbody>
       </table>
@@ -510,7 +536,15 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">Citation (BibTeX)</h2>
-      <pre><code>BibTex Reference will be added once its ready!</code></pre>
+      <pre><code>@misc{bereuter2025,
+      title={Towards Reliable Objective Evaluation Metrics for Generative Singing Voice Separation Models}, 
+      author={Paul A. Bereuter and Benjamin Stahl and Mark D. Plumbley and Alois Sontacchi},
+      year={2025},
+      eprint={2507.11427},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2507.11427}, 
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

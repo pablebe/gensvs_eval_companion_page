@@ -144,6 +144,11 @@ ul {
     padding-left: 30px !important;
     }
 
+ol {
+    list-style-type: numeric;
+    padding: 5px 0 !important;
+    padding-left: 50px !important;
+    }
 
 #T_69211_row2_col0 {
   background-color: (0.0, 0.40784313725490196, 0.21568627450980393, 1.0);
