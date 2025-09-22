@@ -45,6 +45,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body>
 
@@ -278,8 +280,8 @@ trogram MAE from [29]</li><li>Batch size: 1</li><li>Trained on stereo audio <li>
       <td><ul><li>ViSQOL v3 command-line tool from [41] to compute audio version</li><li>Audio has to be resampled to 48 kHz</li></ul></td>
     </tr>
     <tr>
-      <td>m‑res. loss</td>
-      <td>The Multi-resolution STFT Loss (m-res. loss) is computed by averaging the STFT loss denoted in the paper over 5 STFT resolutions (256, 512, 1024, 2048, 4096).</td>
+      <td>\( \mathcal{L}_{\text{MR}} \)</td>
+      <td>The Multi-resolution STFT Loss (\( \mathcal{L}_{\text{MR}} \)) is computed by averaging the STFT loss denoted in the paper over 5 STFT resolutions (256, 512, 1024, 2048, 4096).</td>
       <td><ul><li>Computed using the <code>Auraloss</code> toolbox [42]</li><li>75 % overlap</li><li>A-weighting</li></ul></td>
     </tr>
     <tr>
